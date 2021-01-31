@@ -1,0 +1,17 @@
+.topModel {
+    background-image:linear-gradient(to right, #659DBD , rgb(255, 255, 255));
+    background-size:cover; width:auto;
+    height: 100vh;
+}
+
+.backGroung{
+    background-image: url('src/svg/clip-art-banner-tumblr-transparent.svg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100vh;
+
+}

@@ -1,0 +1,30 @@
+.sidebar{
+    width: 550px;
+    height: 300px;
+    /*border: 1px solid #ccc;*/
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.034);
+    color: #0d1699e3;
+    position: relative;
+    border-radius: 4px;
+    padding: 2px 2px;
+    margin-top: 100px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.txtFormat{
+   color:rgb(4, 0, 255);
+   font-weight: 500;
+   margin-top: 20px;
+}
+
+.numFormat{
+    width: 200px;
+}

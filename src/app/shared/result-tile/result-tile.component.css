@@ -1,0 +1,30 @@
+.result {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.596);
+    color: #0306b8;
+    position: relative;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+a {
+    background-color: aliceblue;
+    font-weight: 500;
+}
+
+.rate{
+    font-weight: 500;
+    color:#0B0C10;
+}
+
+.titleText {
+    color: #0B0C10;
+}
+
+.pageination{
+    margin-left: 10px;
+}

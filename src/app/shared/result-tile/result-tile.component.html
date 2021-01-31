@@ -1,0 +1,18 @@
+<div class="card result" *ngFor="let result of results | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+    <h5 style="display: inline" class="card-header"> {{ result.name }} <h6 class="card-header" style="display: inline; background-color: rgba(240, 248, 255, 0);">(dated: {{result.date}})</h6></h5> 
+    
+    <div class="card-body">
+        <h5 class="card-title titleText">Exchange Rate ({{result.transferAmount}} {{result.base}})</h5>
+        <div *ngFor = "let rate of result.rates">
+            <p class="card-text rate" *ngIf = "rate.value || result.transferAmount" style="display: inline">{{rate.value * result.transferAmount}} {{ rate.name }}</p>
+            <p class="card-subtitle mb-2" style="display: inline;"> (Rate per {{result.base}} is {{rate.value}} {{ rate.name }})</p>
+            <p class="card-subtitle mb-2 float-right" style="display: inline;">Service charge: {{ result.serviceCharge }} {{result.base}}</p>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <a href="https://www.xe.com/currencyconverter/" class="btn btn-outline-success" target="_blank" rel="noopener noreferrer">Initiate transfer</a>
+    </div>
+</div>
+
+<ngb-pagination class = "d-flex justify-content-center pageination" *ngIf="results.length > 3" [collectionSize]="results.length" [(page)]="page" [pageSize]="pageSize" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true">
+</ngb-pagination>

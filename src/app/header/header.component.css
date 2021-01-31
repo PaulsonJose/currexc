@@ -1,0 +1,27 @@
+header {
+    border-radius: 1px solid;
+    
+}
+
+.setBG {
+    background-image:linear-gradient(to right, #659DBD , rgb(255, 255, 255));
+}
+
+.curexc-icon-svg {
+    height: 50px;
+    padding: 8px 8px 8px 0;
+    width: 50px;
+}
+
+.title-text {
+    font-weight: 500;
+    color: #66FCF1;
+    text-shadow: 2px 2px 5px rgb(0, 195, 255);
+    font-size:1.1vw;
+    height: 90px;
+    width: 90px;
+}
+
+.logo {
+    text-decoration: none;
+}

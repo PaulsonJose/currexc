@@ -1,0 +1,44 @@
+<form>
+<div class="container sidebar">
+    <div class="row justify-content-between">
+        <div class="col-6">
+            <div ngbDropdown class="d-inline-block">
+                <div class="form-group">
+                    <label class = "txtFormat" for="sourceCountry">Select Source Currency</label>
+                    <select class="form-control" #sourceCountry [(ngModel)]="sourceCurrency" name  = "sourceCountry" (change)="selectSourceCurrency($event)">
+                      <option disabled = "true" selected>Please select the Currency</option>
+                      <option *ngFor="let curr of currencies" value="{{ curr.name }}">
+                          {{ curr.description }} ({{ curr.name }})</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class = "col-6">
+            <div ngbDropdown class="d-inline-block">
+                <div class="form-group">
+                    <label class = "txtFormat" for="destinationCountry">Select Destination Currency</label>
+                    <select class="form-control" #destinationCountry [(ngModel)]="destinationCurrency" name = "destinationCountry">
+                        <option disabled = "true" selected>Please select the Currency</option>
+                        <option *ngFor="let curr of currencies" value="{{ curr.name }}">
+                            {{ curr.description }} ({{ curr.name }})</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-9">
+        
+            <div class="form-group">
+              <label for="inputAmount" class = "txtFormat">Amount</label>
+              <input type="number" min = "1" class="form-control numFormat" id="inputAmount" aria-describedby="amountHelp" [(ngModel)] = "transferAmount" name = "inputAmount" placeholder="Amount to be send">
+              <small id="amountHelp" class="form-text text-muted">Please enter the {{ sourceCurrencyName }} amount to be send.</small>
+            </div>
+        
+    </div>
+    <div class = "row" style="text-align:right">
+        <div class = "col align-self-end">
+            <button class="btn btn-primary" ngbTooltip="Start searching!" placement="right" (click) = "getResultSet(sourceCountry.value, destinationCountry.value)">Find Rates</button>
+        </div>
+    </div>
+</div>
+</form>
